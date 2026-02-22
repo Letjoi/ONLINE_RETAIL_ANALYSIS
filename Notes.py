@@ -8,8 +8,15 @@ What if I try to find relationship between retention rate and amount of purchase
 """
 
 """What were the major influencers of a major uptick in sales in March 2011 and November 2011??
-Check number of sales per country in both months. Who was buying more? Check lowest sales moths too.
-If defference isn't quite large check months with the largest returns as well."""
+Check number of sales per country in both months. Who was buying more? Check lowest sales months too.
+If difference isn't quite large check months with the largest returns as well."""
+
+"""I seperated purchases from returns by filtering revenue. Important to note that I checked false positives,
+that is errors in whereby price is negative and quantity is negative thus creating an illusion of a false revenue \n
+stream. Also, empty prices were dropped, accounted for less than 5% . The prices that remained were mapped to
+StockCode codes"""
+
+
 
 
 
@@ -23,3 +30,4 @@ Update: Yes there are outliers, but they are not easily detected. Even after fil
 mixed up with actual transactions. One detectable method is goods with all alphabetic StockCodes seem to be
 errors. 'Amazon Fee' for over 17K or postage fee over 100K. It is hard to fish out what is real and what isn't
 without full context but dropped anyway as they are suspicious transactions."""
+
